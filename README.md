@@ -1,108 +1,61 @@
-# Optimized Task Scheduling System with Web Integration (🚧 Ongoing Project 🚧)
+# Optimized Task Scheduling System (CLI-Based)
 
 ## 🚀 Overview
-The **Optimized Task Scheduling System** is a web-based application that efficiently assigns tasks to workers based on resource availability, priority, deadlines, and dependencies. The system implements **Priority Queues** for managing task prioritization, **Greedy Algorithms** for optimal task assignment, and **Graph Theory (Topological Sorting)** to handle task dependencies. 
+The **Optimized Task Scheduling System** is a command-line interface (CLI) application designed to efficiently assign tasks based on resource availability, priority, deadlines, and dependencies. The system utilizes **Priority Queues** for task prioritization, **Greedy Algorithms** for optimal task assignment, and **Graph Theory (Topological Sorting)** to manage dependencies.
 
-This application provides an intuitive interface for users to **add, view, update, and track tasks in real time**. It is designed to handle **large datasets efficiently**, optimize resource utilization, and offer a **visual dashboard** for administrators to monitor task progress.
+This CLI-based task scheduler allows users to add, update, delete, and view tasks. It ensures an optimized execution order while detecting and preventing circular dependencies. Additionally, the system generates a **Graphviz DOT file** for task dependency visualization.
 
-🚧 **This project is an ongoing development. Some features are still in progress and will be implemented soon. Stay tuned!** 🚧
+## 🛠️ Technologies & Algorithms Used
+- **C++** (for high-performance task management)
+- **Graph Theory (Topological Sorting)** (for dependency resolution)
+- **Priority Queue (Min-Heap)** (for efficient task prioritization)
+- **Greedy Algorithms** (for optimal task execution order)
+- **Graphviz** (for visualizing task dependencies)
 
----
-## 🛠️ Tech Stack
-### **Frontend:**
-- HTML, CSS, JavaScript (React.js)
-- ReCharts (for task visualization)
+## 🎯 Features
+✅ **Task Management**: Add, update, and delete tasks with priority levels and deadlines.
+✅ **Optimized Scheduling**: Utilizes priority queues and greedy algorithms to efficiently assign tasks.
+✅ **Dependency Handling**: Ensures correct execution order using topological sorting and detects circular dependencies.
+✅ **Task Visualization**: Generates a Graphviz DOT file to visually represent task dependencies.
+✅ **Reprioritization**: Allows users to update task priorities dynamically.
+✅ **Execution Order Display**: Provides the optimal order of task execution.
 
-### **Backend:**
-- Node.js, Express.js
-
-### **Database:**
-- MongoDB / PostgreSQL
-
-### **Algorithms Used:**
-- **Priority Queues** (for efficient task scheduling)
-- **Greedy Algorithms** (for optimal task assignments)
-- **Graph Theory (Topological Sorting)** (for handling task dependencies)
-
----
-## 🎯 Features (Planned & Ongoing Development)
-✅ **Task Management**: Add, update, and delete tasks with priority levels and deadlines.  
-✅ **Optimized Scheduling**: Uses advanced algorithms to efficiently assign tasks to available resources.  
-🔄 **Dependency Handling**: Ensures correct execution order using Topological Sorting. *(In Progress)*  
-📊 **Real-time Visualization**: Interactive dashboard with D3.js to track schedules. *(Planned)*  
-🔐 **User Authentication**: Secure login and role-based access for users and administrators. *(Planned)*  
-📈 **Scalable & Efficient**: Designed to handle large datasets and optimize workload distribution.  
-
----
-## 📸 Screenshots
-*(To be added after UI development)*
-
----
 ## 🚀 Installation & Setup
-### **Prerequisites:**
+### Prerequisites
 Ensure you have the following installed:
-- Node.js
-- MongoDB (if using MongoDB)
-- PostgreSQL (if using PostgreSQL)
+- **C++ Compiler** (e.g., GCC, Clang, MSVC)
+- **Graphviz** (for generating task dependency graphs)
 
-### **Steps to Run the Project**
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/DineshDumka/TaskScheduler.git
-   cd TaskScheduler
+### Steps to Run the Project
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/DineshDumka/CLI-TaskScheduler.git
+   cd CLI-TaskScheduler
+   ```
+2. **Compile the Code**:
+   ```sh
+   g++ -o task_scheduler task_scheduler.cpp
+   ```
+3. **Run the Application**:
+   ```sh
+   ./task_scheduler
+   ```
+4. **Generate Task Dependency Graph** (if using Graphviz):
+   ```sh
+   dot -Tpng tasks.dot -o tasks.png
    ```
 
-2. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+## 📌 Usage
+### Available Commands:
+- **Add Task**: Enter task name, priority, deadline, and dependencies.
+- **Delete Task**: Remove a task and update dependencies accordingly.
+- **Reprioritize Task**: Modify the priority of an existing task.
+- **Display Execution Order**: Show the optimal order of task execution.
+- **Visualize Dependencies**: Generate a Graphviz DOT file for dependency visualization.
 
-3. **Set Up Environment Variables:**
-   Create a `.env` file in the root directory and add:
-   ```env
-   DATABASE_URL=<your_database_url>
-   PORT=5000
-   ```
-
-4. **Start the Server:**
-   ```bash
-   npm start
-   ```
-
-5. **Run the Frontend:**
-   ```bash
-   cd client
-   npm start
-   ```
-
-The app should now be running at `http://localhost:3000/` 🚀
-
----
-## 📌 API Endpoints (To be finalized)
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| **GET** | `/tasks` | Fetch all tasks |
-| **POST** | `/tasks` | Add a new task |
-| **PUT** | `/tasks/:id` | Update a task |
-| **DELETE** | `/tasks/:id` | Delete a task |
-
----
 ## 🤝 Contributors
-- **Dinesh Dumka** *(Add team members here)*  
+- **Dinesh Dumka**
 
-Feel free to contribute! Fork the repo, make your changes, and submit a pull request.
-
----
-## 📜 License
-This project is licensed under the **MIT License**.
-
----
-## ⭐ Acknowledgments
-- **Graph Theory** for dependency handling
-- **ReCharts** for data visualization
-- **MongoDB/PostgreSQL** for efficient data management
-
----
 ## 📬 Contact
 For any questions or feedback, feel free to reach out! 😊
 
