@@ -1,0 +1,7 @@
+digraph TaskGraph {
+    "a" [label="a\nPriority: 76\nDeadline: 9"];
+    "b" [label="b\nPriority: 8\nDeadline: 7"];
+    "c" [label="c\nPriority: 6\nDeadline: 7"];
+    "b" -> "a";
+    "c" -> "a";
+}
